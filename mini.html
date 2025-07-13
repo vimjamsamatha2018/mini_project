@@ -1,0 +1,1103 @@
+<html><head><base href="." />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoPaddy Crafts - Sustainable Paddy Husk Solutions</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    :root {
+        --primary-color: #4a6741;
+        --secondary-color: #8ba888;
+        --accent-color: #f3e9d2;
+        --text-color: #333;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    body {
+        line-height: 1.6;
+        color: var(--text-color);
+    }
+    
+    header {
+        background-color: var(--primary-color);
+        padding: 1rem;
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+    }
+    
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .logo {
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    
+    .nav-links {
+        display: flex;
+        gap: 2rem;
+    }
+    
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    
+    .nav-links a:hover {
+        color: var(--accent-color);
+    }
+    
+    section {
+        padding: 5rem 2rem;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    #home {
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                    url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        text-align: center;
+    }
+    
+    .hero-content h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .cta-button {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background-color: var(--primary-color);
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+    
+    .cta-button:hover {
+        background-color: var(--secondary-color);
+    }
+    
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+    
+    .product-card {
+        background: white;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        transition: transform 0.3s;
+    }
+    
+    .product-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .coupon {
+        background: var(--accent-color);
+        padding: 2rem;
+        border-radius: 10px;
+        text-align: center;
+        margin: 1rem 0;
+    }
+    
+    .contact-form {
+        display: grid;
+        gap: 1rem;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    input, textarea {
+        padding: 0.5rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    
+    button {
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        padding: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    button:hover {
+        background-color: var(--secondary-color);
+    }
+    
+    .services-themes {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .theme-card {
+        background: var(--accent-color);
+        border-radius: 15px;
+        padding: 2rem;
+        text-align: center;
+        transition: transform 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .theme-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .theme-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: var(--primary-color);
+    }
+    
+    .theme-icon {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 1rem;
+        fill: var(--primary-color);
+    }
+    
+    .theme-title {
+        color: var(--primary-color);
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .theme-description {
+        font-size: 1rem;
+        color: var(--text-color);
+        margin-bottom: 1rem;
+    }
+    
+    .theme-price {
+        font-weight: bold;
+        color: var(--primary-color);
+        font-size: 1.2rem;
+    }
+    
+    .about-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin: 2rem 0;
+    }
+    
+    .mission-vision {
+        padding: 2rem;
+        background: var(--accent-color);
+        border-radius: 15px;
+        transition: transform 0.3s ease;
+    }
+    
+    .mission-vision:hover {
+        transform: translateY(-5px);
+    }
+    
+    .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2.5rem;
+        margin-top: 3rem;
+    }
+    
+    .team-card {
+        background: linear-gradient(145deg, #ffffff, #f3f3f3);
+        border-radius: 20px;
+        padding: 2.5rem;
+        text-align: center;
+        box-shadow: 5px 5px 15px rgba(0,0,0,0.1), 
+                    -5px -5px 15px rgba(255,255,255,0.8);
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .team-card:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 8px 8px 20px rgba(0,0,0,0.15), 
+                    -8px -8px 20px rgba(255,255,255,0.9);
+    }
+    
+    .team-avatar {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin: 0 auto 1.5rem;
+        background: linear-gradient(145deg, var(--primary-color), var(--secondary-color));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        box-shadow: inset 5px 5px 10px rgba(0,0,0,0.2), 
+                    inset -5px -5px 10px rgba(255,255,255,0.1);
+    }
+    
+    .team-avatar svg {
+        width: 80px;
+        height: 80px;
+        fill: white;
+        filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.2));
+    }
+    
+    .team-card h4 {
+        color: var(--primary-color);
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+    }
+    
+    .team-card p {
+        color: var(--secondary-color);
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .team-card::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    .team-card:hover::after {
+        opacity: 1;
+    }
+    
+    .products-showcase {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .product-showcase-card {
+        background: white;
+        border-radius: 15px;
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(74, 103, 65, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .product-showcase-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 25px rgba(74, 103, 65, 0.2);
+    }
+    
+    .product-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 1.5rem;
+        fill: var(--primary-color);
+    }
+    
+    .product-title {
+        color: var(--primary-color);
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+    
+    .product-description {
+        color: var(--text-color);
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+    }
+    
+    .product-features {
+        list-style: none;
+        text-align: left;
+        margin: 1rem 0;
+        padding: 0 1rem;
+    }
+    
+    .product-features li {
+        margin-bottom: 0.5rem;
+        position: relative;
+        padding-left: 1.5rem;
+    }
+    
+    .product-features li:before {
+        content: "•";
+        color: var(--primary-color);
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+    }
+    
+    .product-showcase-card {
+        position: relative;
+    }
+    
+    .product-actions {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        margin-top: 1.5rem;
+    }
+    
+    .like-button {
+        background: none;
+        border: 2px solid var(--primary-color);
+        color: var(--primary-color);
+        padding: 0.5rem 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .like-button.liked {
+        background: var(--primary-color);
+        color: white;
+    }
+    
+    .product-quantity {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin: 1rem 0;
+    }
+    
+    .quantity-btn {
+        background: var(--secondary-color);
+        color: white;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    
+    .quantity-input {
+        width: 60px;
+        text-align: center;
+    }
+    
+    .price-tag {
+        font-size: 1.2rem;
+        color: var(--primary-color);
+        font-weight: bold;
+        margin: 1rem 0;
+    }
+    
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1001;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+    }
+    
+    .modal-content {
+        background: linear-gradient(145deg, #ffffff, #f8f9fa);
+        margin: 10% auto;
+        padding: 2.5rem;
+        border-radius: 20px;
+        max-width: 400px;
+        position: relative;
+        animation: modalSlide 0.3s ease;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    
+    .modal-content h2 {
+        color: var(--primary-color);
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        font-weight: 600;
+    }
+    
+    .auth-form input {
+        background: #f8f9fa;
+        padding: 1rem;
+        border: 2px solid #e9ecef;
+        border-radius: 10px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+    }
+    
+    .auth-form input:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 3px rgba(74, 103, 65, 0.1);
+        outline: none;
+    }
+    
+    .auth-form button {
+        background: linear-gradient(145deg, var(--primary-color), var(--secondary-color));
+        color: white;
+        padding: 1rem;
+        border: none;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+    
+    .auth-form button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(74, 103, 65, 0.2);
+    }
+    
+    .close {
+        position: absolute;
+        right: 1.5rem;
+        top: 1rem;
+        font-size: 2rem;
+        color: var(--primary-color);
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+    
+    .close:hover {
+        transform: rotate(90deg);
+    }
+    
+    .auth-form a {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+    
+    .auth-form a:hover {
+        color: var(--secondary-color);
+        text-decoration: underline;
+    }
+    
+    @keyframes modalSlide {
+        from {
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .nav-links {
+            display: none;
+        }
+        .about-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    .coupons-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .coupon-card {
+        background: linear-gradient(145deg, #ffffff, #f3f3f3);
+        border-radius: 20px;
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 10px 20px rgba(74, 103, 65, 0.1);
+        transition: transform 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .coupon-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .coupon-icon {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 1rem;
+    }
+    
+    .coupon-icon svg {
+        width: 100%;
+        height: 100%;
+        fill: var(--primary-color);
+    }
+    
+    .coupon-card h3 {
+        color: var(--primary-color);
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .discount {
+        font-size: 2rem;
+        font-weight: bold;
+        color: var(--secondary-color);
+        margin-bottom: 0.5rem;
+    }
+    
+    .code {
+        background: var(--accent-color);
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        display: inline-block;
+        margin: 1rem 0;
+        font-family: monospace;
+        font-weight: bold;
+    }
+    
+    .phone-pe-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        width: 100%;
+        background: linear-gradient(145deg, var(--primary-color), var(--secondary-color));
+        color: white;
+        padding: 1rem;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+    
+    .phone-pe-btn:hover {
+        transform: translateY(-2px);
+    }
+    
+    .phonepe-icon {
+        width: 24px;
+        height: 24px;
+        fill: white;
+    }
+    
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .features-grid > div {
+        background: linear-gradient(145deg, #ffffff, #f3f3f3);
+        border-radius: 20px;
+        padding: 2.5rem;
+        text-align: center;
+        box-shadow: 0 10px 20px rgba(74, 103, 65, 0.1);
+        transition: transform 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .features-grid > div:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(74, 103, 65, 0.2);
+    }
+    
+    .features-grid > div::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    }
+    
+    .features-grid h3 {
+        color: var(--primary-color);
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        position: relative;
+        display: inline-block;
+    }
+    
+    .features-grid p {
+        color: var(--text-color);
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+    
+    .features-grid > div svg {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 1.5rem;
+        fill: var(--primary-color);
+    }
+    </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="logo">EcoPaddy Crafts</div>
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#about-us">About Us</a>
+                    <a href="wishlist.html">Products</a>
+                    <a href="#services">Services</a>
+                    <a href="#why-choose">Why Choose Us</a>
+                    <a href="#coupons">Coupons</a>
+                    <a href="#contact">Contact Us</a>
+                    <a href="#" id="loginBtn">Login</a>
+                    <a href="#" id="signupBtn">Sign Up</a>
+                </div>
+            </nav>
+        </header>
+    
+        <section id="home">
+            <div class="hero-content">
+                <h1>Transform Paddy Husk into Art</h1>
+                <p>Sustainable crafting solutions for a greener tomorrow</p>
+                <a href="#products" class="cta-button">Explore Our Products</a>
+            </div>
+        </section>
+    
+        <section id="about-us">
+            <div class="container">
+                <h2>About Us</h2>
+                <div class="about-grid">
+                    <div class="mission-vision">
+                        <h3>Our Mission</h3>
+                        <p>To transform agricultural waste into sustainable, beautiful crafts while promoting environmental consciousness and supporting local communities.</p>
+                    </div>
+                    <div class="mission-vision">
+                        <h3>Our Vision</h3>
+                        <p>To become a global leader in sustainable craft solutions, inspiring a world where waste becomes wonder through creativity and innovation.</p>
+                    </div>
+                </div>
+    
+                <h3>Our Products</h3>
+                <div class="services-themes">
+                    <div class="theme-card">
+                        <svg class="theme-icon" viewBox="0 0 24 24">
+                            <path d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,19H5V5H19V19Z"/>
+                        </svg>
+                        <h3 class="theme-title">Decorative Items</h3>
+                        <p class="theme-description">Beautiful home decor crafted from paddy husk, including vases, wall art, and sculptures.</p>
+                        <p class="theme-price">Starting at $29.99</p>
+                    </div>
+                    <div class="theme-card">
+                        <svg class="theme-icon" viewBox="0 0 24 24">
+                            <path d="M12,3L1,9L12,15L21,10.09V17H23V9M5,13.18V17.18L12,21L19,17.18V13.18L12,17L5,13.18Z"/>
+                        </svg>
+                        <h3 class="theme-title">Eco-Packaging</h3>
+                        <p class="theme-description">Sustainable packaging solutions for businesses, made from processed paddy husk.</p>
+                        <p class="theme-price">Custom pricing</p>
+                    </div>
+                    <div class="theme-card">
+                        <svg class="theme-icon" viewBox="0 0 24 24">
+                            <path d="M12,2L1,9L12,16L23,9L12,2M12,18L1,11L12,18L23,11L12,18Z"/>
+                        </svg>
+                        <h3 class="theme-title">Garden Solutions</h3>
+                        <p class="theme-description">Organic mulch, potting mix, and garden decoratives from paddy husk.</p>
+                        <p class="theme-price">Starting at $19.99</p>
+                    </div>
+                </div>
+    
+                <h3>Our Team</h3>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                            </svg>
+                        </div>
+                        <h4>Samatha</h4>
+                        <p>Founder & Creative Director</p>
+                        <p>Visionary leader with 10+ years in sustainable design</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                            </svg>
+                        </div>
+                        <h4>Jeswanth</h4>
+                        <p>Head of Sustainability</p>
+                        <p>Environmental specialist focused on eco-friendly innovations</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                            </svg>
+                        </div>
+                        <h4>Naveen</h4>
+                        <p>Product Innovation Lead</p>
+                        <p>Creative genius behind our innovative product line</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section id="services">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="services-themes">
+                    <div class="theme-card">
+                        <svg class="theme-icon" viewBox="0 0 24 24">
+                            <path d="M12,3L1,9L12,15L21,10.09V17H23V9M5,13.18V17.18L12,21L19,17.18V13.18L12,17L5,13.18Z"/>
+                        </svg>
+                        <h3 class="theme-title">Educational Workshops</h3>
+                        <p class="theme-description">Learn the art of paddy husk crafting through hands-on workshops. Perfect for schools and community groups.</p>
+                        <p class="theme-price">Starting at $199/session</p>
+                    </div>
+    
+                    <div class="theme-card">
+                        <svg class="theme-icon" viewBox="0 0 24 24">
+                            <path d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,19H5V5H19V19Z"/>
+                        </svg>
+                        <h3 class="theme-title">Corporate Programs</h3>
+                        <p class="theme-description">Customized sustainability programs for businesses, including team building and eco-friendly practices.</p>
+                        <p class="theme-price">Custom quotes available</p>
+                    </div>
+    
+                    <div class="theme-card">
+                        <svg class="theme-icon" viewBox="0 0 24 24">
+                            <path d="M12,2L1,9L12,16L23,9L12,2M12,18L1,11L12,18L23,11L12,18Z"/>
+                        </svg>
+                        <h3 class="theme-title">Bulk Processing</h3>
+                        <p class="theme-description">Industrial-scale paddy husk processing and transformation services for agricultural businesses.</p>
+                        <p class="theme-price">Starting at $499/ton</p>
+                    </div>
+    
+                    <div class="theme-card">
+                        <svg class="theme-icon" viewBox="0 0 24 24">
+                            <path d="M12,3C7.58,3 4,4.79 4,7C4,9.21 7.58,11 12,11C16.42,11 20,9.21 20,7C20,4.79 16.42,3 12,3M4,9V12C4,14.21 7.58,16 12,16C16.42,16 20,14.21 20,12V9C20,11.21 16.42,13 12,13C7.58,13 4,11.21 4,9M4,14V17C4,19.21 7.58,21 12,21C16.42,21 20,19.21 20,17V14C20,16.21 16.42,18 12,18C7.58,18 4,16.21 4,14Z"/>
+                        </svg>
+                        <h3 class="theme-title">Consulting Services</h3>
+                        <p class="theme-description">Expert guidance on implementing sustainable practices and waste management solutions.</p>
+                        <p class="theme-price">$150/hour</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section id="why-choose">
+            <div class="container">
+                <h2>Why Choose Us</h2>
+                <div class="features-grid">
+                    <div>
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"/>
+                        </svg>
+                        <h3>Eco-Friendly</h3>
+                        <p>Our commitment to sustainability goes beyond products. We ensure 100% eco-friendly materials and processes in everything we do.</p>
+                    </div>
+                    <div>
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M11,7H13V14H11V7M11,15H13V17H11V15Z"/>
+                        </svg>
+                        <h3>Quality</h3>
+                        <p>Experience unmatched craftsmanship with our premium quality products, handcrafted with attention to every detail.</p>
+                    </div>
+                    <div>
+                        <svg viewBox="0 0 24 24">
+                            <path d="M19,2L15,6V7.5L12,10.5L14,12.5L17,9.5H18.5L22.5,5.5L19,2M7,8.5L5,6.5L2,9.5C2,9.5 7,14.5 7,17C7,19.5 5,19.5 5,19.5L7.5,22C7.5,22 11,19.5 11,17C11,14.5 7,8.5 7,8.5Z"/>
+                        </svg>
+                        <h3>Innovation</h3>
+                        <p>Through continuous research and development, we pioneer new sustainable solutions and creative applications for paddy husk.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section id="coupons">
+            <div class="container">
+                <h2>Special Offers & Rewards</h2>
+                <div class="coupons-grid">
+                    <div class="coupon-card">
+                        <div class="coupon-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M20,6H17.82C17.93,5.69 18,5.35 18,5A3,3 0 0,0 15,2C13.95,2 13.04,2.54 12.5,3.35L12,4L11.5,3.34C10.96,2.54 10.05,2 9,2A3,3 0 0,0 6,5C6,5.35 6.07,5.69 6.18,6H4C2.89,6 2,6.89 2,8V19C2,20.11 2.89,21 4,21H20C21.11,21 22,20.11 22,19V8C22,6.89 21.11,6 20,6Z"/>
+                            </svg>
+                        </div>
+                        <h3>NEW CUSTOMER SPECIAL</h3>
+                        <p class="discount">15% OFF</p>
+                        <p class="code">ECOPADDY15</p>
+                        <button class="phone-pe-btn" data-code="ECOPADDY15" data-discount="15">
+                            Pay with Phone Pe
+                            <svg class="phonepe-icon" viewBox="0 0 24 24">
+                                <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M11,7H13V14H11V7M11,15H13V17H11V15Z"/>
+                            </svg>
+                        </button>
+                    </div>
+    
+                    <div class="coupon-card">
+                        <div class="coupon-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+                            </svg>
+                        </div>
+                        <h3>BULK ORDER DISCOUNT</h3>
+                        <p class="discount">20% OFF</p>
+                        <p class="code">BULK20</p>
+                        <button class="phone-pe-btn" data-code="BULK20" data-discount="20">
+                            Pay with Phone Pe
+                            <svg class="phonepe-icon" viewBox="0 0 24 24">
+                                <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M11,7H13V14H11V7M11,15H13V17H11V15Z"/>
+                            </svg>
+                        </button>
+                    </div>
+    
+                    <div class="coupon-card">
+                        <div class="coupon-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M11,7H13V14H11V7M11,15H13V17H11V15Z"/>
+                            </svg>
+                        </div>
+                        <h3>PHONEPE SPECIAL</h3>
+                        <p class="discount">Extra 5% OFF</p>
+                        <p class="code">PHONEPE5</p>
+                        <button class="phone-pe-btn" data-code="PHONEPE5" data-discount="5">
+                            Pay with Phone Pe
+                            <svg class="phonepe-icon" viewBox="0 0 24 24">
+                                <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M11,7H13V14H11V7M11,15H13V17H11V15Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section id="contact">
+          <div class="container">
+              <h2>Contact Us</h2>
+              <form class="contact-form">
+                  <input type="text" placeholder="Full Name" required height="50px" width="50px">
+                  <input type="email" placeholder="Email Address" required height="50px" width="50px">
+                  <input type="tel" placeholder="Phone Number" required height="50px" width="50px">
+                  <input type="text" placeholder="Subject" required height="50px" width="50px">
+                  <textarea placeholder="Your Message" rows="5" required></textarea>
+                  <button type="submit">Send Message</button>
+              </form>
+          </div>
+      </section>
+    
+        <!-- Login Modal -->
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Login</h2>
+                <form id="loginForm" class="auth-form">
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                    <p>Don't have an account? <a href="#" id="switchToSignup">Sign up</a></p>
+                </form>
+            </div>
+        </div>
+    
+        <!-- Signup Modal -->
+        <div id="signupModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Sign Up</h2>
+                <form id="signupForm" class="auth-form">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <input type="password" placeholder="Confirm Password" required>
+                    <button type="submit">Sign Up</button>
+                    <p>Already have an account? <a href="#" id="switchToLogin">Login</a></p>
+                </form>
+            </div>
+        </div>
+    
+        <script>
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').replace('#', '');
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+    
+            // Form submission handling
+            document.querySelector('.contact-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your message! We will get back to you soon.');
+                this.reset();
+            });
+    
+            // Modal functionality
+            const loginModal = document.getElementById('loginModal');
+            const signupModal = document.getElementById('signupModal');
+            const loginBtn = document.getElementById('loginBtn');
+            const signupBtn = document.getElementById('signupBtn');
+            const closeBtns = document.querySelectorAll('.close');
+            const switchToSignup = document.getElementById('switchToSignup');
+            const switchToLogin = document.getElementById('switchToLogin');
+    
+            loginBtn.onclick = () => loginModal.style.display = "block";
+            signupBtn.onclick = () => signupModal.style.display = "block";
+    
+            closeBtns.forEach(btn => {
+                btn.onclick = function() {
+                    loginModal.style.display = "none";
+                    signupModal.style.display = "none";
+                }
+            });
+    
+            window.onclick = (event) => {
+                if (event.target == loginModal || event.target == signupModal) {
+                    loginModal.style.display = "none";
+                    signupModal.style.display = "none";
+                }
+            }
+    
+            switchToSignup.onclick = (e) => {
+                e.preventDefault();
+                loginModal.style.display = "none";
+                signupModal.style.display = "block";
+            }
+    
+            switchToLogin.onclick = (e) => {
+                e.preventDefault();
+                signupModal.style.display = "none";
+                loginModal.style.display = "block";
+            }
+    
+            // Form submissions
+            document.getElementById('loginForm').onsubmit = (e) => {
+                e.preventDefault();
+                alert('Login functionality would be implemented here');
+                loginModal.style.display = "none";
+            }
+    
+            document.getElementById('signupForm').onsubmit = (e) => {
+                e.preventDefault();
+                alert('Signup functionality would be implemented here');
+                signupModal.style.display = "none";
+            }
+    
+            // Add animation on scroll
+            window.addEventListener('scroll', () => {
+                const sections = document.querySelectorAll('section');
+                sections.forEach(section => {
+                    const rect = section.getBoundingClientRect();
+                    if (rect.top <= window.innerHeight * 0.7) {
+                        section.style.opacity = '1';
+                    }
+                });
+            });
+    
+            document.addEventListener('DOMContentLoaded', function() {
+                // Product quantity controls
+                document.querySelectorAll('.quantity-btn').forEach(button => {
+                    button.addEventListener('click', function() {
+                        const input = this.parentElement.querySelector('.quantity-input');
+                        const currentValue = parseInt(input.value);
+                        
+                        if (this.classList.contains('minus') && currentValue > 1) {
+                            input.value = currentValue - 1;
+                        } else if (this.classList.contains('plus') && currentValue < 99) {
+                            input.value = currentValue + 1;
+                        }
+                    });
+                });
+    
+                // Like button functionality
+                document.querySelectorAll('.like-button').forEach(button => {
+                    button.addEventListener('click', function() {
+                        const likeCount = this.querySelector('.like-count');
+                        if (this.classList.contains('liked')) {
+                            this.classList.remove('liked');
+                            likeCount.textContent = parseInt(likeCount.textContent) - 1;
+                        } else {
+                            this.classList.add('liked');
+                            likeCount.textContent = parseInt(likeCount.textContent) + 1;
+                        }
+                    });
+                });
+    
+                // Add to cart functionality
+                document.querySelectorAll('.add-to-cart').forEach(button => {
+                    button.addEventListener('click', function() {
+                        const card = this.closest('.product-showcase-card');
+                        const productName = card.querySelector('.product-title').textContent;
+                        const quantity = card.querySelector('.quantity-input').value;
+                        alert(`Added to cart: ${quantity} x ${productName}`);
+                    });
+                });
+    
+                // Phone Pe payment integration handling
+                document.querySelectorAll('.phone-pe-btn').forEach(button => {
+                    button.addEventListener('click', function() {
+                        const code = this.dataset.code;
+                        const discount = this.dataset.discount;
+                        
+                        // Simulate Phone Pe integration
+                        const simulatePayment = async () => {
+                            try {
+                                // This would be replaced with actual Phone Pe API integration
+                                await new Promise(resolve => setTimeout(resolve, 1500));
+                                alert(`Payment successful!\nCoupon ${code} applied.\nYou saved ${discount}% on your purchase!`);
+                            } catch (error) {
+                                alert('Payment failed. Please try again.');
+                            }
+                        };
+                        
+                        simulatePayment();
+                    });
+                });
+            });
+        </script>
+    </body></html>
